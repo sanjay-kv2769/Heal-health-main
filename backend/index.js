@@ -38,6 +38,9 @@ app.use('/api/staff_profile',StaffProfileRoutes)
 app.use('/api/patient-booking',BookingRouter)
 app.use('/api/test',testRouter)
 
+app.get("/",(req,res)=>{
+    res.send("Server is working")
+})
 
 app.listen(port, ()=>{
     console.log(`Server started on ${port}`)
